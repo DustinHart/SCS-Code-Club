@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Banner Cycle</title>
+	<style type="text/css">
+		p {
+			font: 14px normal arial, verdana, helvetica;
+		}
+	</style>
+	<script>
+		var banners = ["images/banner1.png", "images/banner2.png", "images/banner3.png"];
+		var links = ["http://designsrdu.com/code.html", "http://flowers.designsrdu.com", "http://www.mathfromthehart.weebly.com"]
+		
+		function run() {
+			setInterval(cycle, 2000);
+		}
+		function cycle() {
+			var random = Math.round(Math.random()*2);
+			if(random == 0) {
+				document.getElementById("banner").src = banners[0];
+				document.getElementById("bannerLink").href = links[0];
+			}
+			else if (random == 1) {
+				document.getElementById("banner").src = banners[1];
+				document.getElementById("bannerLink").href = links[1];
+			}
+			else {
+				document.getElementById("banner").src = banners[2];
+				document.getElementById("bannerLink").href = links[2];
+			}
+		}
+	</script>
+</head>
+<body onLoad="run();" style="width: 100%;">
+
+	<a id="bannerLink" href="http://designsrdu.com/code.html"><img id="banner" alt="banner" src="images/banner1.png" style="width: 700px; height: auto; display: block; margin: auto;" /></a>
+</body>
+</html>

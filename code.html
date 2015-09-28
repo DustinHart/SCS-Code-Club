@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SCS Code Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+        $(function() {
+            $("#title").load("content.html article:eq(0) .title");
+            $("#image").load("content.html article:eq(0) .artImage");
+
+            $("#image0").load("content.html article:eq(0) .artImage");
+            $("#slider0 .sliderText p").load("content.html article:eq(0) .info p:eq(1)");
+            $("#slider0 .sliderText a").load("content.html article:eq(0) .title2 a");            
+            
+            $("#image1").load("content.html article:eq(1) .artImage");
+            $("#slider1 .sliderText p").load("content.html article:eq(1) .info p:eq(1)");
+            $("#slider1 .sliderText a").load("content.html article:eq(1) .title2 a");            
+  
+            $("#image2").load("content.html article:eq(0) .artImage");
+            $("#image3").load("content.html article:eq(0) .artImage");
+
+    });
+});
+     </script>
+     <style>
+            /* ===== Responsiveness ===== */
+    /* Responsive Footer */
+    #skinnyFooter, #skinnyFooter2 {
+        display: none;
+    }
+
+    #image a img {
+        width: 100%; 
+        height: auto;
+        border: 1px solid black;
+    }
+
+    @media screen and (max-width: 650px) {
+        .toc {
+            display: block;
+            margin: auto;
+            width: 225px;
+        }
+
+        .toc:first-child {
+            margin-left: auto;
+        }
+
+        #wideFooter {
+            display: none;
+        }
+
+        #skinnyFooter, #skinnyFooter2 {
+            display: block;
+        }
+    }
+     </style>
+</head>
+<body>
+    <header>
+        <h1 style="float: left; padding-left: 40px;"><a href="code.html">SCS Code Club</a></h1><h4 style="float: right; font-weight: 400; padding-top: 10px;" 
+        id="about">About</h4>
+        <hr style="clear: both;" />
+        <nav>
+            <ul>
+                <li><a id="navHtml" href="#">HTML<a /></li>
+                <li><a id="navCss" href="#">CSS</a></li>
+                <li><a id="navJs" href="#">JAVASCRIPT</a></li>
+                <li><a id="navOther" href="#">Other Resources</a></li>
+            </ul>
+            <hr />
+        </nav>
+    </header>
+    <section id="jumbo" style="height: auto; background-color: #f4f6f7; float: left;">
+        <!-- Left Image of Jumbotron -->
+        <article style="float: left; width: 55%; height: auto">
+            <div id="image"><img src="#"/></div>
+            <div id="title">
+                <h2></h2>
+            </div>
+        </article>
+
+        <article style="float: right; width: 44%; height: auto;">
+
+            <div id="slider0" class="slider">
+                <div id="image0"></div>
+                <div class="sliderText">
+                    <em><p></p></em>
+                    <a href="#"><h3></h3></a>
+                </div>
+                <div class="sliderColor" style="background-color: #e34c26;"></div>
+            </div>
+
+            <div id="slider1" class="slider">
+                <div id="image1"></div>
+                <div class="sliderText">
+                    <em><p></p></em>
+                    <a href="#"><h3></h3></a>
+                </div>
+                <div class="sliderColor" style="background-color: #e34c26;"></div>
+            </div>
+            <div id="slider2" class="slider">
+                <div id="image2"></div>
+                <div class="sliderText">
+                    <em><p>#Next</p></em>
+                    <a href="#"><h3>Article Three(Two) Goes Here</h3></a>
+                </div>
+                <div class="sliderColor" style="background-color: #e34c26;"></div>
+            </div>
+
+            <div id="slider3" class="slider">
+                <div id="image3"></div>
+                <div class="sliderText">
+                    <em><p>#HTML</p></em>
+                    <a href="#"><h3>Article One Goes Here</h3></a>
+                </div>
+                <div class="sliderColor" style="background-color: #e34c26;"></div>
+            </div>
+        </article>
+    </section>
+    <section style="clear: both; height: 75px; width: 100%; background-color: #fff;"></section>
+        <footer style="clear: both; margin-top: 10px; padding: 15px;">
+        <section style="text-align: left;">
+            <article class="toc">
+                <h2>Content</h2>
+                <ul style="list-style: none;">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Other Resources</a></li>
+                </ul>
+            </article>
+            <article class="toc">
+                <h2>Content by Skill Level</h2>
+                <ul style="list-style: none;">
+                    <li><a href="#">Beginner</a></li>
+                    <li><a href="#">Intermediate</a></li>
+                    <li><a href="#">Expert</a></li>
+                </ul>
+            </article>
+            <article class="toc">
+                <h2>Contact</h2>
+                <ul style="list-style: none;">
+                    <li><a href="mailto:dustin.hart@dpsnc.net">Dustin.Hart@dpsnc.net</a></li>
+                    <li>(919) 560-3535 Ext. 14233</li>
+                    <li>5001 Red Mill Road<br />Durham, NC 27701</li>
+
+                </ul>
+            </article>
+        </section>
+        <hr />
+        <!-- Hidden when screen less than 750px wide -->
+        <p id="wideFooter">&copy; <a href="http://www.mathfromthehart.weebly.com">Dustin Hart</a> | <a href="http://www.scs.dpsnc.net">The School for Creative Studies</a></p>
+        <!-- Hidden when screen more than 750px wide -->
+        <p id="skinnyFooter">&copy; <a href="http://www.mathfromthehart.weebly.com">Dustin Hart</a><br/></p> 
+        <p id="skinnyFooter2"><a href="http://www.scs.dpsnc.net">The School for Creative Studies</a></p>
+    </footer>
+</body>
+</html>

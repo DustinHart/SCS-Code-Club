@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hart Simple Slider</title>
+	<script>
+		var banners = ["images/banner1.png", "images/banner2.png", "images/banner3.png"];  // Source for images for slider
+		var links = ["http://designsrdu.com/code.html", "http://flowers.designsrdu.com", "http://www.mathfromthehart.weebly.com"]
+		//  Link to hrefs for each slide
+		var counter = 0;
+		function run() {
+			setInterval(cycle, 2000);  // Sets the speed of slider
+		}
+		function cycle() {
+			counter++;
+			if(counter == banners.length) {
+				counter = 0;  // Restarts counter to 0 when it gets to the end of the array
+			}
+			document.getElementById("banner").src = banners[counter];
+			// Changes the img src tag to each image in the var banners
+			document.getElementById("bannerLink").href = links[counter];
+			// Changes the <a> href tag to each link in the var links
+		}
+	</script>
+</head>
+<body onLoad="run();">  <!-- Activates slider AFTER page fully loads -->
+	<a id="bannerLink" href="http://designsrdu.com/code.html"><img id="banner" alt="banner" src="images/banner1.png" style="width: 500px; height: auto;" /></a>  
+	<!-- anchor href and img src is set to first slide.  This gets img and link to slow up before the slider actually loads since it loads after the page is fully loaded.  This is then changed out each time the setInterval speed activates. -->
+</body>
+</html>

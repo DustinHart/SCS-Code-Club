@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Object Oriented Programming</title>
+	<style type="text/css">
+		p {
+			font: 14px normal arial, verdana, helvetica;
+		}
+	</style>
+	<script>
+	function Card() {
+		this.suits = 'Heart';
+		this.faces = 'King';
+		this.showSuit = function() {
+			alert(this.suits);
+		}
+		this.showFace = function() {
+			alert(this.faces);
+		}
+		this.setSuit = function(newSuit) {
+			this.suits = prompt("Enter the name of the suit:");
+			newSuit = this.suits;
+		}
+		this.setFace = function(newFace) {
+			this.faces = prompt("Enter the name of the face:");
+			newFace = this.faces;
+		}
+	}		
+
+	var deck = new Card();
+	var deck2 = new Card();
+	</script>
+</head>
+<body>
+	<h2>First Deck</h2>
+	<input type="button" value="Show Suit" onclick="deck.showSuit()" />
+	<input type="button" value="Show Face" onclick="deck.showFace()" />
+	<input type="button" value="Set Suit" onclick="deck.setSuit()" />
+	<input type="button" value="Set Face" onclick="deck.setFace()" />
+	<br/>
+	<h2>Second Deck</h2>
+	<input type="button" value="Show Suit" onclick="deck2.showSuit()" />
+	<input type="button" value="Show Face" onclick="deck2.showFace()" />
+	<input type="button" value="Set Suit" onclick="deck2.setSuit()" />
+	<input type="button" value="Set Face" onclick="deck2.setFace()" />
+	<br/>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Getting Started with HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="artStyle.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $("#title").load("content.html #codeAcademyHtml .title");
+                $("#info").load("content.html #codeAcademyHtml .info");
+                $("#image").load("content.html #codeAcademyHtml .image");
+                $("#post").load("content.html #codeAcademyHtml .post");
+            });
+        });
+    </script>
+</head>
+<body id="htmlBody">
+    <header>
+        <h1>SCS Code Club</h1>
+        <nav>
+        	<hr/>
+            <ul>
+                <li><a id="navHtml" href="#" style="border-bottom: 5px solid #e34c26; color: #e34c26;">HTML</a></li>
+                <li><a id="navCss" href="#">CSS</a></li>
+                <li><a id="navJs" href="#">JAVASCRIPT</a></li>
+                <li><a id="navOther" href="#">Other Resources</a></li>
+            </ul>
+            <hr />
+        </nav>
+    </header>
+    <section id="artWrapper">
+    	<div id="title">
+    		<a href="#"><h2></h2></a>
+    	</div>
+    	<div id="info">
+    		<p></p>
+    		<p>#HTML</p>
+    		<p></p>
+    	</div>
+    	<div id="image">
+    		<a href="#"><img src=""></a>
+    	</div>
+    	<div id="post">
+    	</div>
+        <div id="disqus_thread"></div>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'designsrdu';
+            
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </section>
+        <footer style="clear: both; margin-top: 10px; padding: 15px;">
+        <section style="text-align: left;">
+            <article class="toc" style="margin-left: 15px;">
+                <h2>Content</h2>
+                <ul style="list-style: none;">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Other Resources</a></li>
+                </ul>
+            </article>
+            <article class="toc">
+                <h2>Content by Skill Level</h2>
+                <ul style="list-style: none;">
+                    <li><a href="#">Beginner</a></li>
+                    <li><a href="#">Intermediate</a></li>
+                    <li><a href="#">Expert</a></li>
+                </ul>
+            </article>
+            <article class="toc">
+                <h2>Contact</h2>
+                <ul style="list-style: none;">
+                    <li><a href="mailto:dustin.hart@dpsnc.net">Dustin.Hart@dpsnc.net</a></li>
+                    <li>(919) 560-3535 Ext. 14233</li>
+                    <li>5001 Red Mill Road<br />Durham, NC 27701</li>
+
+                </ul>
+            </article>
+        </section>
+        <hr />
+        <p>&copy; <a href="http://www.mathfromthehart.weebly.com">Dustin Hart</a> | <a href="http://www.scs.dpsnc.net">The School for Creative Studies</a></p>
+    </footer>
+</body>
+</html>

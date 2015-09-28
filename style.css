@@ -1,0 +1,113 @@
+﻿* {
+	font-family: 'Open Sans', sans-serif;
+	color: #444444;
+}
+body {
+	padding: 0px 10px;
+}
+
+nav ul li {
+	font-size: 18px;
+	display: inline-block;
+	font-weight: 400;
+	margin-right:20px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* HTML Nav Link */
+#navHtml:hover {
+	border-bottom: 5px solid #e34c26;
+	color: #e34c26; /* Red/Chocolate */
+}
+
+/* CSS Nav Link */
+#navCss:hover {
+	border-bottom: 5px solid #2eb3c4;
+	color: #2eb3c4; /* Light Blue */
+}
+
+/* JS Nav Link */
+#navJs:hover {
+	border-bottom: 5px solid #f29923;
+	color: #f29923; /* Orange */
+}
+
+/* Other Resources Nav Link */
+#navOther:hover {
+	border-bottom: 5px solid #694d9f;
+	color: #694d9f; /* Purple */
+}
+
+#jumbo {
+	background-color: #F8F8FF; /* Grey #F8F8FF or Really Light Blue -> #F4FEFF */
+}
+
+.slider:first-child {
+	margin-top: -5px;
+}
+
+.slider > * {
+	vertical-align: top;
+}
+
+#image0, #image1, #image2, #image3 {
+	display: inline-block;
+	width: 34%; 
+	height: auto;
+}
+
+.slider img {
+	width: 100%; 
+	height: auto;
+	display: inline-block;
+	margin-top: 5px;
+	border: 1px solid black;
+}
+
+.sliderText {
+	width: 60%; 
+	display: inline-block;
+	padding-left: 1%;
+	line-height: 20px;
+}
+
+.sliderColor {
+	width: 2%; 
+	height: 100px; 
+	display: inline-block;
+	margin-top: 5px;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	background-color: #f4f6f7;
+}
+
+footer p a:hover {
+	color: #33ccff;
+	border-bottom: 2px solid #33ccff;
+}
+
+.toc {
+	display: inline-block;
+	vertical-align: top;
+	width: 31%;
+}
+
+.toc > * {
+	padding-left: 0px;
+}
+
+.toc:first-child {
+	margin-left: 15px;
+}
+
+footer a:hover {
+	color: #33ccff;
+}
+

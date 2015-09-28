@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Cancelling Default Behavior</title>
+	<style type="text/css">
+		* {
+			font: 15px normal arial, verdana, helvetica;
+		}
+	</style>
+	<script>
+		function checkForm() {
+			document.getElementById("form1").onsubmit = function() {
+				
+				if(document.getElementById("user").value == "") {
+					alert("Name field cannot be blank");
+					allowSubmit = false;
+				}
+				else { 
+				alert("Data OK - submitting form");
+				return allowSubmit;
+				}
+			}
+		}
+		window.onload = checkForm;
+	</script>
+</head>
+<body>
+	<form id="form1">
+		Name: <input type="text" value="" name="username" id="user" /> [Required Field]<br/>
+		Phone: <input type="text" value="" name="telephone" id="phone" /> [Optional Field]<br/>
+		<input type="submit"/>
+	</form>
+</body>
+</html>
